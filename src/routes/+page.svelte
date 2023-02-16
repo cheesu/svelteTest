@@ -18,7 +18,7 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		스벨트 이거 뭐야 쓔밤<br />SvelteKit app
 	</h1>
 
 	<h2>
