@@ -3,8 +3,20 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+  
+	export let data: PageData;
+	$: ({ board } = data);
 
+	console.log("ttest",data.board);
+ 
+	data.board.forEach((item:any) => {
+		//console.log('>>>> ' + item.title)
+		//console.log('>>>> ' + item.content)
+	});
+    
 
 </script>
 
@@ -12,11 +24,14 @@
 	<h1>테스트 페이지</h1>
 
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-
-		이런식으로 가는거구나
+		몽고디비 데이터 연동 테스트
 	</p>
+
+	<ul>
+		{#each data.board as item}
+        	<li>{item.title}  {item.content}</li>
+   		{/each}
+	</ul>
 
 	<pre>타입스크립트 처음 써보는데 드럽게 어렵네요</pre>
 
