@@ -29,7 +29,8 @@
 
 	<ul>
 		{#each data.board as item}
-        	<li>{item.title}  {item.content}</li>
+        	<li> title : {item.title} <br/> content :  {item.content}</li>
+			<br/>
    		{/each}
 	</ul>
 
