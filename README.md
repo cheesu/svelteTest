@@ -1,8 +1,8 @@
-#svelteKit  Demo test for study
+# svelteKit  Demo test for study
 
+This project is for studying sveleteKit.
 
-
-
+Personally, I prefer using a router.
 
 
 # create-svelte
