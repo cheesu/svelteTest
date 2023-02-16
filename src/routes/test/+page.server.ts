@@ -17,18 +17,17 @@ export const load: PageServerLoad = async function () {
 		)
 		.toArray();
  
-	
+	let titles : any[] = [];
 	data.forEach((item) => {
 		console.log('>>>> title : ' + item.title);
-		if (item.title.length > 14) {
-			item.length = item.title.length * 0.7
-		} else {
-			item.length = item.title.length * 0.8
-		}
+		item.length = item.title.length
+
+        titles.push(item.title);
 	})
 	
 	const loadData = JSON.parse(JSON.stringify(data))
 	return {
-		board: loadData
+		board: loadData,
+        titleList : titles
 	};
 };
